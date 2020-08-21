@@ -12,7 +12,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    height: 75%;
+    flex: 1 1 75%;
     text-align: center;
     writing-mode: vertical-rl;
 }
@@ -55,7 +55,7 @@ nav {
     transition: all 0.3s ease;
 }
 #nav-divider {
-    flex: 1 1 20%;
+    flex: 0 0 20%;
     border-right: 1px solid var(--primary-text-color);
 }
 #socialnav-divider {
@@ -107,6 +107,7 @@ nav {
     }
     #social {
         justify-content: center;
+        height: unset;
         position: relative;
         flex-direction: row;
         font-size: 1.2em;
