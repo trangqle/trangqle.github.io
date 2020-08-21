@@ -1,0 +1,47 @@
+.profile {
+    position: relative;
+    top: -15%;
+    padding: 0 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+#hello {
+    font-family: 'White Angelica', Quicksand, Arial, Helvetica, sans-serif;
+    font-size: 4em;
+}
+.about-thumbnail {
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 40%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .profile {
+        width: 85%;
+    }
+    .about-thumbnail {
+        position: static;
+        margin: auto;
+        width: 80%;
+    }
+}
+/* contact */
+.contact {
+    width: 60%;
+}
+.contact h1 {
+    font-family: 'White Angelica', Quicksand, Arial, Helvetica, sans-serif;
+    font-size: 4em;
+}
+.contact p {
+    color: var(--secondary-text-color);
+}
+.contact a {
+    color: var(--primary-text-color);
+    transition: all 0.3s ease;
+}
+.contact a:hover {
+    color: var(--secondary-text-color);
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,14 @@
+.footer {
+    padding: 20px 0;
+    font-size: 0.7em;
+    line-height: 1;
+    text-align: center;
+}
+.footer hr {
+    width: 40%;
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+.footer a {
+    color: var(--secondary-text-color);
+}

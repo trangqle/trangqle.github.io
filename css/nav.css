@@ -1,0 +1,122 @@
+nav {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    top: 0;
+    margin-top: 10%;
+    margin-left: 20px;
+}
+.navbar {
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 75%;
+    text-align: center;
+    writing-mode: vertical-rl;
+}
+
+.navbar-item {
+    flex: 1 1 auto;
+    color: var(--primary-text-color);
+    transition: all 0.3s ease;
+}
+.navbar-item:hover {
+    color: var(--secondary-text-color);
+    transition: all 0.3s ease;
+}
+
+.nav-author a {
+    font-family: 'White Angelica', 'Quicksand', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: var(--primary-text-color);
+}
+
+#social {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+.social-icon {
+    flex: 0 0 7.5%;
+    color: var(--primary-text-color);
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    color: var(--secondary-text-color);
+    transition: all 0.3s ease;
+}
+#nav-divider {
+    flex: 1 1 20%;
+    border-right: 1px solid var(--primary-text-color);
+}
+#socialnav-divider {
+    flex: 0 0 40%;
+    border-right: 1px solid var(--primary-text-color);
+}
+@media (max-height: 400px) {
+    .navbar {
+        flex-direction: column;
+        writing-mode: unset;
+        transform: unset;
+    }
+    .navbar-item {
+        padding: 0;
+    }
+    .social-icon {
+        flex: 0 0 10%;
+    }
+    #nav-divider {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        margin: 20px 0;
+        height: auto;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar {
+        width: 80%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        writing-mode: unset;
+        transform: unset;
+    }
+    .navbar-item {
+        padding: 0;
+        flex: 1 1 auto;
+        margin-bottom: 10px;
+        font-size: unset;
+        transform: unset;
+    }
+    .nav-author a {
+        font-size: 1.4em;
+    }
+    #social {
+        justify-content: center;
+        position: relative;
+        flex-direction: row;
+        font-size: 1.2em;
+        margin-top: 10px;
+        margin-bottom: -20px;
+    }
+    .social-icon {
+        flex: 0 0 8%;
+    }
+    #nav-divider, #socialnav-divider {
+        display: none;
+    }
+}

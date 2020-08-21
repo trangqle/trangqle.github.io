@@ -1,0 +1,32 @@
+.layout-main {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    float: right;
+}
+
+#nav {
+    flex: 0 0 10%;
+    padding: 0 20px;
+}
+#social {
+    flex: 0 0 5%;
+}
+#content {
+    flex: 1;
+    margin: 2vw 0 2vw 15vw;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .layout-main {
+        flex-direction: column;
+    }
+    #content {
+        width: 90%;
+        margin: auto;
+    }
+    #social {
+        order: -1;
+    }
+}

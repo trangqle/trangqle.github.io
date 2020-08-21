@@ -1,0 +1,34 @@
+.work-main img {
+    width: 100%;
+}
+.work-main h1 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 2em;
+}
+.work-main h3 {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.work-main p {
+    color: var(--primary-text-color);
+    line-height: 1.4;
+}
+
+#work-main-content h1,
+#work-main-content h3,
+#work-main-content p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    margin: 20px 0;
+}
+
+#work-main-thumbnail {
+    margin-bottom: -20px;
+}

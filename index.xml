@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Trang Le</title>
+    <link>http://trangqle.github.io/</link>
+    <description>Recent content in Home on Trang Le</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://trangqle.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Witchie Creamery</title>
+      <link>http://trangqle.github.io/works/witchie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://trangqle.github.io/works/witchie/</guid>
+      <description>Witchie is a personal project for an ice cream shop with a magical aesthetic theme and a modern twist — a must-go destination for all the young witchcraft lovers. To fully bring out their characteristics, this identity concept uses a combination of brush and sans-serif typefaces, with funky-cute looking illustrations and a bold, simple color scheme.</description>
+    </item>
+    
+    <item>
+      <title>Anemoia</title>
+      <link>http://trangqle.github.io/works/anemoia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://trangqle.github.io/works/anemoia/</guid>
+      <description>anemoia (n.): nostalgia for the time one have never known.
+—
+Anemoia is a female fashion brand that is inspired by Victorian and Edwardian aesthetics. They aim to bring back the classy look of the era, but with a more modern and casual feel; a look into a faraway past.</description>
+    </item>
+    
+    <item>
+      <title>QUALIFARM</title>
+      <link>http://trangqle.github.io/works/qualifarm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://trangqle.github.io/works/qualifarm/</guid>
+      <description>QUALIFARM is a chain grocery store in Hanoi, Vietnam, delivering clean, high-quality, yet affordable food. The brand&amp;rsquo;s concept is designed to bring out these very aspects - vibrant, yet elegant; organic, yet carefully constructed.</description>
+    </item>
+    
+    <item>
+      <title>Nhai Ben Magazine</title>
+      <link>http://trangqle.github.io/works/nhaiben/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://trangqle.github.io/works/nhaiben/</guid>
+      <description>Nhai Ben Magazine is a magazine run by the students of FPT High School (Hanoi, Vietnam). Inspired by magazines like T-pot Journal and Kinfolk, Nhai Ben offers a look into the life of FPT students, along with various articles about lifestyles, education, etc.
+I worked on this magazine as the lead designer from 2016 to 2019, and from 2019 onwards I work alongside other members as a mentor.</description>
+    </item>
+    
+    <item>
+      <title>Various posters - vol.1</title>
+      <link>http://trangqle.github.io/works/poster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://trangqle.github.io/works/poster/</guid>
+      <description>Some posters made during my second year in School of Art, University of Manitoba.</description>
+    </item>
+    
+  </channel>
+</rss>

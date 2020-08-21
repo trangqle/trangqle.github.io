@@ -1,0 +1,31 @@
+/* all variables and all the global things */
+:root {
+    --bg-color: #ffffff;
+    --primary-text-color: #212121;
+    --secondary-text-color: #7c7c7c;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background-color: var(--bg-color);
+    hyphens: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #404040 rgba(0,0,0,0);
+    scrollbar-width: thin;
+}
