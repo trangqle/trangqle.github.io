@@ -1,0 +1,60 @@
+extends layouts/main.pug
+
+mixin section(title)
+    section.switcher
+        .stack
+            h1 #{title}
+            div
+        article.stack
+            if block
+                block
+mixin item(name, job, date)
+    details.stack
+        summary.stack(class="stack-size:smol")
+            .cluster
+                strong.anim-underline= name
+                img(src="/assets/icons/plus.svg", alt="expand" class="icon:med")
+            if job
+                p #{job} &mdash; #{date}
+            else
+                p #{date}
+        .stack(class="stack-size:smol")
+            block
+
+block splash
+    .stack#aboutme(class="stack-size:smol center:fixed-width")
+        img(src="/assets/icons/logo-alt-1.svg", alt="", class="icon:med")
+        h1(class="font-size:variable text-align:center") ABOUT
+            br
+            span(class="typeface:untitled") ME
+        .frame(style="max-width: 42ch;")
+            img(src="/assets/me.jpg", alt="portrait")
+block content
+    .stack(class="stack-size:big")
+        .stack#about(class="center:fixed-width text-align:center")
+            .cluster(style="justify-content:center")
+                img.icon(src="/assets/icons/logo-alt-2.svg", alt="")
+                img.icon(src="/assets/icons/logo-alt-3.svg", alt="")
+                img.icon(src="/assets/icons/logo-alt-1.svg", alt="")
+            p(class="font-size:m typeface:freight") Using a pragmatic approach with a strong emphasis on research, I create visual systems that enhance brand values and deepen connections to people. My works go beyond any specific style, but not without a touch of feminity and modern minimalism. I always look forward to learning new things and facing new challenges.
+            a(href="/assets/KatherineLe-Resume.pdf" class="button-size:big").button
+                span VIEW MY FULL RESUME
+                .button-bg
+        .stack#resume(class="center:variable-width")
+            hr
+            +section("Experience")
+                +item("Addyson Kids", "Designer", "November 2021–present")
+                    p Worked alongside the founder to research and develop new branding identity and business collateral for the company that better represents their products, values, and customer base.
+                    p Streamlined digital marketing process and increased email campaign turnaround time by 70% in 3 months by planning and designing email components and social media templates databases.
+                    p Researched, illustrated and designed clothing patterns.
+                +item("Freelance", "Brand & Visual Designer", "2019–2021")
+                    p Conducted in-depth research and conceptualized visual directions for small businesses globally, based on their visions, values, cultures and current design trends.
+                    p Developed concepts for logos, brand guidelines, marketing materials and other graphics as required using industry standard software.
+                +item("Vancouver Humane Society", "Graphic Designer", "July 2020–present")
+                    p Designed publication layouts for 2 major reports on addressing animal neglect, veterinary outreach services and trauma-informed care that was well-received by internal stakeholders, funders, and the public
+                    p Illustrated a series of artworks for a new line of fundraising apparel to provide education and support advocacy efforts on the inherent rights and needs of all animals.
+                    p Created diagrams, charts, worksheets and teaching materials for Trauma-Informed & Culturally Safe Training programs, taken by 9 organizations in the animal services sector across Canada with positive feedback.
+            hr
+            +section("Education")
+                +item("School of Art, University of Manitoba", null, "September 2018–May 2022")
+                    p BFA Studio Art (Concentration in Graphic Design)

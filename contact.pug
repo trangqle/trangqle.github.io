@@ -1,0 +1,29 @@
+extends layouts/main.pug
+
+block splash
+    .stack(class="center:fixed-width stack-size:large")
+        h1(class="font-size:variable text-align:center") Hi! It’s exciting to meet you.
+            br
+            | Let’s create something awesome.
+        .frame(style="max-width: 20ch;")
+            video(src="/assets/hello.mp4" autoplay muted loop alt="hello there!")
+        nav
+            .stack(class="stack-size:smol")
+                a(class="button button-size:big" href="mailto:")
+                    img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                    span SEND ME A NOTE
+                    .button-bg
+                a(class="button button-size:big" href="https://behance.net/katherine-le")
+                    span BEHANCE
+                    .button-bg
+                a(class="button button-size:big" href="https://www.linkedin.com/in/katherinele00")
+                    span LINKEDIN
+                    .button-bg
+                a(class="button button-size:big" href="https://instagram.com/meyuneko")
+                    span INSTAGRAM
+                    .button-bg
+    .cluster#main-social(class="center:variable-width")
+        nav.cluster
+        p &#169; 2022
+
+block footer

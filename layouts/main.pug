@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0")
+        link(href="/css/main.css" rel="stylesheet")
+    body.stack(class="stack-size:large")
+        .cover
+            header#header(class="center:variable-width")
+                .cluster.text-icon
+                    img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                    p(class="line-height:tight") AVAILABLE FOR FULL TIME
+                        br
+                        | + FREELANCE WORK
+                a(href="/")
+                    .replacements
+                        img(class="icon:big" src="/assets/icons/logo-main.svg", alt="logo")
+                        img(class="icon:smol" src="/assets/icons/logo-alt-1.svg", alt="logo")
+                nav.switcher#main-nav
+                    div
+                        a.anim-underline(href="/#works")  WORK
+                    div
+                        a.anim-underline(href="/about")  ABOUT
+                    div
+                        a(href="/contact").button
+                            span GET&nbsp;IN&nbsp;TOUCH
+                            .button-bg
+            block splash
+        block content
+        block footer
+            .stack#footer
+                img(class="icon:big" src="/assets/icons/logo-alt-1.svg", alt="logo")
+                h2(class="font-size:variable-xl text-align:center") Come say hi!
+                p(class="text-align:center center:fixed-width") Having a project in mind or simply wanting to chat?
+                    br
+                    | Feel free to send me a message!
+                a.button(href="mailto:" class="button-size:big center:fixed-width")
+                    img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                    span SEND ME A NOTE
+                    .button-bg
+                .cluster.main-social(class="center:variable-width")
+                    nav.cluster
+                        a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
+                        a.anim-underline(href="https://instagram.com/meyuneko") INSTAGRAM
+                        a.anim-underline(href="https://www.linkedin.com/in/katherinele00") LINKEDIN
+                    nav.cluster
+                        p &#169; 2022
+                        a.anim-underline(href="#header") Back to top

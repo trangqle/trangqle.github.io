@@ -1,0 +1,48 @@
+extends main.pug
+
+block splash
+    .stack#work-wrapper
+        - let len = collections.work.length
+        - let pageIdx = collections.work.findIndex((x) => x.data.title === title) + 1
+        div(class="center:variable-width")
+            img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+            span &nbsp; #{pageIdx} / #{len}
+        .stack#work-info
+            .switcher(class="center:variable-width")
+                h1(class="font-size:xl") #{title}
+                .cluster
+                    .stack(class="stack-size:smol")
+                        p CATEGORIES
+                        ul
+                            each cat in info.categories
+                                li #{cat.cat}
+                    .stack(class="stack-size:smol")
+                        p YEAR
+                        p #{info.date}
+            .frame#splash
+                img(src=info.thumb, alt=title)
+
+
+block content
+    .switcher#article(class="center:variable-width")
+        div
+        article.stack(class="font-size:m2") !{content}
+    .stack(class="center:variable-width")
+        if imglist
+            each img in imglist
+                if img.video
+                    video(src=img.url autoplay muted loop alt=img.alt)
+                else
+                    img(src=img.url, alt=img.alt)
+    nav.cluster(class="center:variable-width")
+        -
+            let prev = filters.getPreviousCollectionItem(collections.work, page)
+            let next = filters.getNextCollectionItem(collections.work, page)
+        if prev
+            a.anim-iconback(href=prev.url class="typeface:freight font-size:l") Previous
+        else
+            div
+        if next
+            a.anim-iconfwd(href=next.url class="typeface:freight font-size:l") Next
+        else
+            div

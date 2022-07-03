@@ -1,0 +1,523 @@
+/* Typeface stylings */
+
+/* @font-face */
+@font-face {
+    font-family: "FreightDisp Pro Light";
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/FreightDispProLight-Regular.woff2') format('woff2'),
+         url('/assets/fonts/FreightDispProLight-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: "Untitled Sans";
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/UntitledSans-Regular.woff2') format('woff2'),
+         url('/assets/fonts/UntitledSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: "Untitled Sans";
+    font-weight: 700;
+    font-display: swap;
+    src: url('/assets/fonts/UntitledSans-Medium.woff2') format('woff2'),
+         url('/assets/fonts/UntitledSans-Medium.woff') format('woff');
+}
+
+/* global type styling */
+:root {
+    font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    /* font size variables */
+    --font-size-xl: 4rem;
+    --font-size-l: 3rem;
+    --font-size-m: 2.75rem;
+    --font-size-m2: 1.25rem;
+    --font-size-base: 1rem;
+    --font-size-s: 0.65rem;
+    /* color palette */
+    --fg: #23221f;
+    --bg: #fdfdfb;
+}
+
+/* utility typeface  classes - only use if absolutely needed! */
+/* font-size */
+.font-size\:xl {
+    font-size: var(--font-size-xl) !important;
+}
+.font-size\:l {
+    font-size: var(--font-size-l) !important;
+}
+.font-size\:m {
+    font-size: var(--font-size-m) !important;
+    line-height: 1.2;
+}
+.font-size\:m2 {
+    font-size: var(--font-size-m2) !important;
+}
+.font-size\:base {
+    font-size: var(--font-size-base) !important;
+}
+.font-size\:s {
+    font-size: var(--font-size-s) !important;
+}
+.font-size\:variable {
+    font-size: clamp(var(--font-size-l), 3vw, var(--font-size-xl));
+    line-height: 1.05;
+}
+.font-size\:variable-xl {
+    font-size: clamp(var(--font-size-xl), 5vw, 40rem);
+    line-height: 1;
+}
+/* text-align */
+.text-align\:center {
+    text-align: center !important;
+}
+.typeface\:freight {
+    font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
+    font-weight: 400 !important;
+}
+.typeface\:untitled {
+    font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+}
+/* line-height */
+.line-height\:tight, .line-height\:tight * {
+    line-height: 1.2 !important;
+}
+/* cap */
+.cap\:true {
+    text-transform: uppercase;
+}
+
+/* element type styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+h1 {
+    font-size: var(--font-size-l);
+}
+h2 {
+    font-size: var(--font-size-m);
+}
+h3 {
+    font-size: var(--font-size-m);
+}
+p {
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* global color */
+html, body {
+    background-color: var(--bg);
+}
+* {
+    color: var(--fg);
+}
+
+/* main layouts */
+/* global variables + config */
+:root {
+    --ratio: 1.5;
+    --gap: 1.5rem;
+    --gap-2: calc(var(--gap) * var(--ratio));
+    --gap-3: calc(var(--gap-2) * var(--ratio));
+    --gap-4: calc(var(--gap-3) * var(--ratio));
+    --gap-s1: calc(var(--gap) / var(--ratio));
+}
+* {
+    box-sizing: border-box;
+    /* overriding browser's styling */
+    margin: 0;
+}
+body {
+    margin-inline: min(2vw, var(--gap));
+}
+img, video {
+    inline-size: 100%;
+    block-size: 100%;
+}
+/* stack */
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+.stack > *:not(script) + *:not(script) {
+    /* TODO: remove the :not(script) part prior to deployment */
+    margin-block-start: var(--space);
+}
+.stack-size\:large {
+    --space: var(--gap-3);
+}
+.stack-size\:smol {
+    --space: var(--gap-s1);
+}
+/* cover */
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-block-size: 100vh;
+}
+.cover > :first-child {
+    margin-block-start: 0;
+}
+.cover > :last-child {
+    margin-block-end: 0;
+}
+/* cluster */
+.cluster {
+    display: flex;
+    flex-direction: row;
+    gap: 0 var(--gap);
+    justify-content: space-between;
+    align-items: baseline;
+}
+/* center - 2 variants*/
+/* to be used with other layouts */
+.center\:variable-width {
+    --inline-size: 160ch;
+    width: 100%;
+    box-sizing: content-box;
+    max-width: min(100%, var(--inline-size));
+    margin-inline: auto;
+}
+.center\:fixed-width {
+    --inline-size: 75ch;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    max-width: min(100%, var(--inline-size));
+    margin-inline: auto;
+}
+/* grid - 3 columns */
+.grid {
+    --size: 30%;
+    display: grid;
+    grid-gap: 3rem var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(clamp(20rem, calc(var(--size) + var(--gap)), 100%), 1fr));
+}
+/* grid, non collapsible */
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+/* switcher */
+.switcher {
+    --switch: 60ch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 var(--gap-4);
+}
+.switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switch) - 100%) * 999);
+}
+
+/* sticky */
+.sticky {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.sticky > * {
+    --sticky: 2vh;
+    position: sticky;
+    top: var(--sticky);
+}
+.sticky > :nth-child(2) {
+    --sticky: 3vh;
+}
+.sticky > :nth-child(3) {
+    --sticky: 4vh;
+}
+.sticky > :nth-child(n+4) {
+    --sticky: 5vh;
+}
+.sticky > * + * {
+    margin-block-start: 20rem;
+}
+/* frame */
+.frame {
+    /* aspect ratio - change as needed */
+    --w: 3;
+    --h: 4;
+    /* width of frame */
+    --width: 100%;
+    aspect-ratio: var(--w) / var(--h);
+    overflow: hidden;
+    max-width: var(--width);
+    border-radius: min(10%, 2rem);
+}
+.frame img, .frame video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+/* button */
+.button {
+    position: relative;
+    border: .5px solid var(--fg);
+    border-radius: 999rem;
+    padding: 0.25em 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+.button > *:not(.button-bg) {
+    z-index: 2;
+    transition: all 0.3s ease-out;
+}
+.button-size\:big {
+    min-width: 25ch;
+    min-height: 5ex;
+}
+.button-bg {
+    width: 0%;
+    height: 100%;
+    background-color: var(--fg);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+/* icon */
+.icon {
+    height: 1.5ex;
+    width: auto;
+}
+.icon\:med {
+    height: 2.5ex;
+    width: auto;
+}
+.icon\:big {
+    height: 4ex;
+    width: auto;
+}
+.icon\:smol {
+    height: 1.25ex;
+    width: auto;
+}
+
+/* element specific - header */
+#header {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 10rem) 1fr;
+    align-items: center;
+    padding-block: var(--gap);
+    --inline-size: 160ch;
+}
+#header > :nth-child(2) {
+    justify-self: center;
+}
+#header > :nth-child(3) {
+    align-items: center;
+    justify-content: flex-end;
+}
+#header > :nth-child(3) > * {
+    flex-grow: unset;
+}
+
+#main-nav {
+    --switch: 40ch;
+}
+#main-nav > * {
+    display: flex;
+    justify-content: flex-end;
+}
+#main-nav > *:not(:last-child) {
+    padding-inline-end: 0.75rem;
+}
+
+.replacements > * {
+    display: none;
+}
+.replacements > :first-child {
+    display: unset;
+}
+@media screen and (max-width: 75ch) {
+    .replacements > :first-child {
+        display: none;
+    }
+    .replacements > :nth-child(2) {
+        display: unset;
+    }
+    #header {
+        align-items: baseline;
+    }
+}
+.text-icon {
+    justify-content: flex-start;
+    gap: 0 var(--gap-s1);
+}
+/* splash */
+#splash > .frame {
+    --w: 3;
+    --h: 2;
+    max-width: 36ch;
+}
+
+/* social bar */
+.main-social {
+    padding-block: var(--gap-s1);
+}
+/* footer */
+#footer {
+    justify-content: flex-end;
+    margin-inline: max(-2vw, -1.5rem);
+    padding: var(--gap-3) var(--gap);
+}
+
+/* entry */
+.entry .frame {
+    aspect-ratio: unset;
+    width: 95vw;
+    height: 90vh;
+    filter: brightness(.7);
+}
+.cat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-s1);
+    justify-content: center;
+}
+.entrydata, .counter {
+    filter: invert() contrast(200%);
+    position: absolute;
+    bottom: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.counter {
+    bottom: unset;
+    top: 5vh;
+}
+#worksegment {
+    align-items: center;
+}
+#about {
+    max-width: min(100%, 160ch);
+}
+
+.divider {
+    align-self: center;
+    height: 15rem;
+    width: 0;
+    border: .5px solid var(--fg);
+}
+
+/* work pages */
+#splash {
+    --w: 16;
+    --h: 9;
+    max-width: 100%;
+}
+#work-info > .switcher {
+    gap: var(--gap-3);
+    --switch: 30ch;
+}
+#work-info > .switcher > * {
+    flex-grow: 1;
+}
+#work-info .cluster > * {
+    flex-grow: 1;
+}
+#work-wrapper {
+    margin-block-start: 22.5vh;
+    --space: calc(var(--gap-4) * var(--ratio));
+}
+#article, #about {
+    margin-block: calc(var(--gap-4) * 3);
+}
+#about {
+    max-width: min(100%, 105ch);
+}
+
+/* about me page */
+#aboutme .frame {
+    --w: 3;
+    --h: 4;
+}
+details > summary {
+    cursor: pointer;
+}
+details[open] > summary .icon\:med {
+    transform: rotate(45deg);
+}
+details > summary .icon\:med {
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+/* -- animation -- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* animations */
+.anim-underline {
+    /* overflow: hidden; */
+    position: relative;
+}
+.anim-underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 0.2px;
+    background: var(--fg);
+    transition: all 0.2s ease-out;
+}
+.anim-underline:hover::before, .anim-underline:focus::before {
+    right: 0;
+}
+
+.anim-iconback, .anim-iconfwd {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2em;
+}
+.anim-iconback::before, .anim-iconfwd::after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    transition: all 0.2s ease-out;
+}
+.anim-iconback::before {
+    background-image: url("/assets/icons/arrow-left.svg");
+}
+.anim-iconfwd::after {
+    background-image: url("/assets/icons/arrow-right.svg");
+}
+.anim-iconback:hover::before {
+    transform: translateX(-0.25em);
+}
+.anim-iconfwd:hover::after {
+    transform: translateX(0.25em);
+}
+
+.button:hover > *:not(.button-bg), .button:focus > *:not(.button-bg), .button:active > *:not(.button-bg) {
+    filter: invert(1) contrast(2);
+    transition: all 0.3s ease-out;
+}
+.button:hover > .button-bg, .button:focus > .button-bg, .button:active > .button-bg {
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
+

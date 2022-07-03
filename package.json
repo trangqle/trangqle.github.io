@@ -1,0 +1,16 @@
+{
+  "name": "cata-second-website",
+  "version": "1.0.0",
+  "description": "portfolio site for cata",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-attrs": "^4.1.4",
+    "markdown-it-block-image": "^0.0.3"
+  }
+}
