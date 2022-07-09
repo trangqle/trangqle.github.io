@@ -382,6 +382,20 @@ img, video {
 }
 
 /* entry */
+.entry {
+    display: grid;
+    grid-template-columns: 100%;
+}
+.entry > * {
+    grid-area: 1/1/1/1;
+}
+.entry > .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap-2);
+}
 .entry .frame {
     aspect-ratio: unset;
     width: 95vw;
@@ -397,10 +411,6 @@ img, video {
 }
 .entrydata, .counter {
     filter: invert() contrast(200%);
-    position: absolute;
-    bottom: 8vh;
-    left: 50%;
-    transform: translateX(-50%);
 }
 .counter {
     bottom: unset;

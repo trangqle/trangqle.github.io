@@ -25,18 +25,19 @@ mixin entry(url, title, date, categories, thumb, idx)
             - let len = collections.work.length
             .frame
                 img(src=thumb, alt=title)
-            .counter
-                img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-                span &nbsp; #{idx + 1} / #{len}
-            .stack(class="stack-size:smol center:fixed-width text-align:center").entrydata
-                h2(class="font-size:variable") #{title}
-                ul.cat(class="font-size:s cap:true")
-                    each cat in categories
-                        li #{cat.cat}
-                .button(class="button-size:big")
-                    img(src="/assets/icons/logo-alt-3.svg", alt="").icon
-                    span VIEW WORK
-                    .button-bg
+            .overlay
+                .counter
+                    img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                    span &nbsp; #{idx + 1} / #{len}
+                .stack(class="stack-size:smol center:fixed-width text-align:center").entrydata
+                    h2(class="font-size:variable") #{title}
+                    ul.cat(class="font-size:s cap:true")
+                        each cat in categories
+                            li #{cat.cat}
+                    .button(class="button-size:big")
+                        img(src="/assets/icons/logo-alt-3.svg", alt="").icon
+                        span VIEW WORK
+                        .button-bg
 
 block content
     .stack#about(class="center:fixed-width text-align:center")
