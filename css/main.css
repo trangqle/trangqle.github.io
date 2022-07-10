@@ -119,6 +119,7 @@ ul {
 /* global color */
 html, body {
     background-color: var(--bg);
+    height: 100%;
 }
 * {
     color: var(--fg);
@@ -163,10 +164,11 @@ img, video {
 }
 /* cover */
 .cover {
+    --cover-size: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-block-size: 100vh;
+    min-block-size: var(--cover-size);
 }
 .cover > :first-child {
     margin-block-start: 0;
@@ -370,6 +372,10 @@ img, video {
     max-width: 36ch;
 }
 
+#landing {
+    --cover-size: 100%;
+}
+
 /* social bar */
 .main-social {
     padding-block: var(--gap-s1);
@@ -530,4 +536,3 @@ html {
     width: 100%;
     transition: all 0.3s ease-out;
 }
-
