@@ -2,6 +2,9 @@ module.exports = function(eleventyConfig) {
     // Watch changes to css
     eleventyConfig.addWatchTarget("./css/")
     eleventyConfig.addPassthroughCopy("./css/")
+    // Watch changes to not css
+    eleventyConfig.addWatchTarget("./js/")
+    eleventyConfig.addPassthroughCopy("./js/")
     // Copy assets
     eleventyConfig.addWatchTarget("assets")
     eleventyConfig.addPassthroughCopy("assets")

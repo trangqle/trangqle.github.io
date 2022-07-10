@@ -37,6 +37,8 @@
     /* color palette */
     --fg: #23221f;
     --bg: #fdfdfb;
+
+    --screen-without-nav: calc(100vh - var(--header-block-size));
 }
 
 /* utility typeface  classes - only use if absolutely needed! */
@@ -235,7 +237,7 @@ img, video {
 .sticky > * {
     --sticky: 2vh;
     position: sticky;
-    top: var(--sticky);
+    top: calc(var(--sticky) + var(--header-block-size));
 }
 .sticky > :nth-child(2) {
     --sticky: 3vh;
@@ -319,6 +321,10 @@ img, video {
     align-items: center;
     padding-block: var(--gap);
     --inline-size: 160ch;
+
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 #header > :nth-child(2) {
     justify-self: center;
@@ -370,6 +376,10 @@ img, video {
     max-width: 36ch;
 }
 
+#landing {
+    min-block-size: var(--screen-without-nav);
+}
+
 /* social bar */
 .main-social {
     padding-block: var(--gap-s1);
@@ -399,7 +409,7 @@ img, video {
 .entry .frame {
     aspect-ratio: unset;
     width: 95vw;
-    height: 90vh;
+    height: calc(90vh - var(--header-block-size));
     filter: brightness(.7);
 }
 .cat {
