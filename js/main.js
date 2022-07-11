@@ -32,8 +32,6 @@ for (const id of cursors.keys()) {
 
 let lastUpdate = 0;
 
-let body = document.body;
-
 let renderCursors = () => {
     if (nextCursorState !== enabledCursors) {
         for (let i = 0; nextCursorState && i < cursorPos.length; i++) {
@@ -43,9 +41,9 @@ let renderCursors = () => {
                 updateCursorIds.push(i);
         }
         if (enabledCursors) {
-            body.removeAttribute('data-customcursor');
+            document.documentElement.removeAttribute('data-customcursor');
         } else {
-            body.setAttribute('data-customcursor', '');
+            document.documentElement.setAttribute('data-customcursor', '');
         }
 
         enabledCursors = nextCursorState;
