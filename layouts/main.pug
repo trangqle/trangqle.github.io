@@ -32,48 +32,52 @@ html(lang="en" prefix="og: https://ogp.me/ns#")
         link(href="/assets/icons/favicon-hi.png" type="image/png" rel="apple-touch-icon" sizes="180x180")
         link(href="/assets/icons/favicon-167px.png" type="image/png" rel="apple-touch-icon" sizes="167x167")
         link(href="/css/main.css" rel="stylesheet")
-    body.cover
-        header#header(class="center:variable-width")
-            .cluster.text-icon
-                img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-                p(class="line-height:tight") AVAILABLE FOR FULL TIME
-                    br
-                    | + FREELANCE WORK
-            a(href="/")
-                .replacements
-                    img(class="icon:big" src="/assets/icons/logo-main.svg", alt="logo")
-                    img(class="icon:smol" src="/assets/icons/logo-alt-1.svg", alt="logo")
-            nav.switcher#main-nav
-                div
-                    a.anim-underline(href="/#works")  WORK
-                div
-                    a.anim-underline(href="/about")  ABOUT
-                div
-                    a(href="/contact").button
-                        span GET&nbsp;IN&nbsp;TOUCH
-                        .button-bg
-        .stack(class="stack-size:large")
-            .cover#landing
-                div
-                block splash
-            block content
-        block footer
-            .stack#footer(class="stack-size:large")
-                img(class="icon:big" src="/assets/icons/logo-alt-1.svg", alt="logo")
-                h2(class="font-size:variable-xl text-align:center") Come say hi!
-                p(class="text-align:center center:fixed-width") Having a project in mind or simply wanting to chat?
-                    br
-                    | Feel free to send me a message!
-                a.button(href="mailto:" class="button-size:big center:fixed-width")
+    body
+        .cover#top
+            header#header(class="center:variable-width")
+                .cluster.text-icon
                     img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-                    span SEND ME A NOTE
-                    .button-bg
-                .cluster.main-social(class="center:variable-width")
-                    nav.cluster
-                        a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
-                        a.anim-underline(href="https://instagram.com/meyuneko") INSTAGRAM
-                        a.anim-underline(href="https://www.linkedin.com/in/katherinele00") LINKEDIN
-                    nav.cluster
-                        p &#169; 2022
-                        a.anim-underline(href="#header") Back to top
-    script(src="/js/main.js")
+                    p(class="line-height:tight") AVAILABLE FOR FULL TIME
+                        br
+                        | + FREELANCE WORK
+                a(href="/")
+                    .replacements
+                        img(class="icon:big" src="/assets/icons/logo-main.svg", alt="logo")
+                        img(class="icon:smol" src="/assets/icons/logo-alt-1.svg", alt="logo")
+                nav.switcher#main-nav
+                    div
+                        a.anim-underline(href="/#works")  WORK
+                    div
+                        a.anim-underline(href="/about")  ABOUT
+                    div
+                        a(href="/contact").button
+                            span GET&nbsp;IN&nbsp;TOUCH
+                            .button-bg
+            .stack(class="stack-size:large")
+                .cover#landing
+                    div
+                    block splash
+                block content
+            block footer
+                .stack#footer(class="stack-size:large")
+                    img(class="icon:big" src="/assets/icons/logo-alt-1.svg", alt="logo")
+                    h2(class="font-size:variable-xl text-align:center") Come say hi!
+                    p(class="text-align:center center:fixed-width") Having a project in mind or simply wanting to chat?
+                        br
+                        | Feel free to send me a message!
+                    a.button(href="mailto:" class="button-size:big center:fixed-width")
+                        img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                        span SEND ME A NOTE
+                        .button-bg
+                    .cluster.main-social(class="center:variable-width")
+                        nav.cluster
+                            a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
+                            a.anim-underline(href="https://instagram.com/meyuneko") INSTAGRAM
+                            a.anim-underline(href="https://www.linkedin.com/in/katherinele00") LINKEDIN
+                        nav.cluster
+                            p &#169; 2022
+                            a.anim-underline(href="#top") Back to top
+        .cursor(class = "cursor-style:dot")
+            div
+        .cursor(class = "cursor-style:ring cursor-anim:lerp")
+        script(src="/js/main.js")

@@ -38,6 +38,7 @@
     --fg: #23221f;
     --bg: #fdfdfb;
 
+    --header-block-size: 0px;
     --screen-without-nav: calc(100vh - var(--header-block-size));
 }
 
@@ -321,6 +322,8 @@ img, video {
     align-items: center;
     padding-block: var(--gap);
     --inline-size: 160ch;
+    background-color: var(--bg);
+    z-index: 999;
 
     position: sticky;
     top: 0;
@@ -404,7 +407,7 @@ img, video {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: var(--gap-2);
+    padding: var(--gap-4) var(--gap-2);
 }
 .entry .frame {
     aspect-ratio: unset;
@@ -541,3 +544,52 @@ html {
     transition: all 0.3s ease-out;
 }
 
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) translate3d(var(--x, 0), var(--y, 0), 0);
+    opacity: 0;
+
+    pointer-events: none;
+    scale: 1;
+    will-change: transform filter;
+    z-index: 9999;
+}
+
+.cursor.cursor-style\:dot {
+    mix-blend-mode: exclusion;
+}
+
+.cursor.cursor-style\:dot > :first-child {
+    background-color: var(--bg);
+    inline-size: 7px;
+    block-size: 7px;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.cursor.cursor-style\:dot[data-hover] > :first-child {
+    transform: scale(calc(30 / 7));
+}
+
+.cursor.cursor-style\:ring {
+    background: transparent;
+
+    inline-size: 30px;
+    block-size: 30px;
+    border: 1px solid var(--fg);
+    border-radius: 50%;
+}
+
+.cursor.cursor-style\:ring[data-hover] {
+    border-color: transparent;
+}
+
+[data-customcursor], [data-customcursor] * {
+    cursor: none;
+}
+
+[data-customcursor] .cursor {
+    opacity: 1;
+}
