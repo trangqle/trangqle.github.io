@@ -281,6 +281,9 @@ img, video {
     gap: 0.5rem;
     overflow: hidden;
 
+    /* https://stackoverflow.com/a/16681137 */
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 .button > *:not(.button-bg) {
     z-index: 2;
