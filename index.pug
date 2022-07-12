@@ -1,13 +1,13 @@
 extends layouts/main.pug
 
 block splash
-    .stack#splash(class="center:fixed-width")
-        img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:med")
-        .frame
-            video(src="/assets/splash.mp4" autoplay muted loop alt="hello there!")
+    #splash(class="center:fixed-width")
+        img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:big")
         h1(class="font-size:variable text-align:center") VISUAL
             br
             span(class="typeface:untitled") DESIGNER
+        .frame
+            video(src="/assets/splash-2.mp4" autoplay muted loop alt="hello there!")
         a(class="button button-size:big center:fixed-width" href="#works")
             img(src="/assets/icons/logo-alt-1.svg", alt="").icon
             span EXPLORE MY WORK
