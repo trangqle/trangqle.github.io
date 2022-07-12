@@ -428,9 +428,9 @@ img, video {
 }
 /* footer */
 #footer {
-    justify-content: flex-end;
+    min-block-size: var(--screen-without-nav);
     margin-inline: max(-2vw, -1.5rem);
-    padding: var(--gap-3) var(--gap);
+    padding-inline: var(--gap);
 }
 
 /* entry */
@@ -502,10 +502,11 @@ img, video {
     margin-block-start: 22.5vh;
     --space: calc(var(--gap-4) * var(--ratio));
 }
-#article, #about {
-    margin-block: calc(var(--gap-4) * 3);
+#article {
+    margin-block: calc(var(--gap-4) * 2.25);
 }
 #about {
+    margin-block: calc(var(--gap-4) * 3.375);
     max-width: min(100%, 105ch);
 }
 
