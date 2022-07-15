@@ -588,7 +588,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%) translate3d(var(--x, 0), var(--y, 0), 0);
+    /* transform: ; this is set by script */
     opacity: 0;
 
     pointer-events: none;

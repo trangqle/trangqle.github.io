@@ -8,14 +8,19 @@ let afterFrame = [];
 let frameId = 0;
 let lastFrameTime = 0;
 function renderFrame(frameTime) {
-    for (const [idx, elem] of domAttrAdd)
-        docObjects[idx].setAttribute(elem, '');
+    for (const [idx, elem] of domAttrAdd) {
+        // Benchmarking shows that querying is faster than set
+        if (!docObjects[idx].hasAttribute(elem))
+            docObjects[idx].setAttribute(elem, '');
+    }
     for (const [idx, elem] of domSetStyle)
         docObjects[idx].setAttribute('style', elem);
     for (const [idx, [prop, value]] of domSetStyleProp)
         docObjects[idx].style.setProperty(prop, value);
-    for (const [idx, elem] of domAttrRemove)
-        docObjects[idx].removeAttribute(elem);
+    for (const [idx, elem] of domAttrRemove) {
+        if (docObjects[idx].hasAttribute(elem))
+            docObjects[idx].removeAttribute(elem);
+    }
 
     domAttrAdd.clear();
     domAttrRemove.clear();
@@ -49,7 +54,7 @@ for (cursor of document.getElementsByClassName("cursor")) {
 let lerpPosition = lerpCursors.map(() => [0, 0]);
 
 function setCursorPosition(id, x, y) {
-    domSetStyle.set(id, `--x: ${x}px; --y: ${y}px`);
+    domSetStyleProp.set(id, ['transform', `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0)`]);
 }
 
 function lerp(src, dest, step) {
