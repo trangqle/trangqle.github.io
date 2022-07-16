@@ -1,4 +1,5 @@
 let docObjects = [];
+let docToId = new Map();
 let domAttrAdd = [];
 let domAttrRemove = [];
 let domSetStyle = [];
@@ -151,11 +152,61 @@ for (const elem of document.querySelectorAll('a, button')) {
 }
 
 let header = document.getElementById("header");
+let headerBlockSize;
 if (header) {
     new ResizeObserver((entries) => {
         let box = entries[0];
-        let blockSize = box.borderBoxSize ? box.borderBoxSize[0].blockSize : box.target.getBoundingClientRect().height;
-        domSetStyleProp[DocId] = ['--header-block-size', `${blockSize}px`];
+        headerBlockSize = box.borderBoxSize ? box.borderBoxSize[0].blockSize : box.target.getBoundingClientRect().height;
+        domSetStyleProp[DocId] = ['--header-block-size', `${headerBlockSize}px`];
         queueFrame();
     }).observe(header, {box: 'border-box'});
+}
+
+let animeObserver = new IntersectionObserver((entries) => {
+    let visibleIds = entries.filter(x => x.isIntersecting).map(x => docToId.get(x.target));
+    for (let i = 0; i < visibleIds.length; i++)
+        domAttrAdd[visibleIds[i]] = 'data-shown';
+    queueFrame();
+}, {
+    threshold: 0.5
+});
+for (const elem of document.getElementsByClassName('anime')) {
+    let elemId = docObjects.push(elem) - 1;
+    docToId.set(elem, elemId);
+    animeObserver.observe(elem);
+}
+
+let minInlineSize = [];
+let sizeTracker = new ResizeObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+        const nodeId = docToId.get(entries[i].target);
+        const minSize = minInlineSize[nodeId];
+        const inlineSize = entries[i].borderBoxSize ? entries[i].borderBoxSize[0].inlineSize : entries[i].target.getBoundingClientRect().width;
+        if (inlineSize >= minSize) {
+            domAttrAdd[nodeId] = 'data-abovemininline';
+            delete domAttrRemove[nodeId];
+        } else {
+            domAttrRemove[nodeId] = 'data-abovemininline';
+            delete domAttrAdd[nodeId];
+        }
+    }
+
+    queueFrame();
+});
+
+for (const elem of document.getElementsByClassName('track-size')) {
+    if (elem.hasAttribute('data-mininlinesize')) {
+        const nodeMinInlineSize = elem.getAttribute('data-mininlinesize');
+        const test = document.createElement('div');
+        test.style.inlineSize = nodeMinInlineSize;
+        elem.appendChild(test);
+        const minInlineSizeInPx = test.getBoundingClientRect().width;
+        elem.removeChild(test);
+
+        const id = docObjects.push(elem) - 1;
+        docToId.set(elem, id);
+        minInlineSize[id] = minInlineSizeInPx;
+
+        sizeTracker.observe(elem);
+    }
 }

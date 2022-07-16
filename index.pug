@@ -8,10 +8,8 @@ block splash
             span(class="typeface:untitled") DESIGNER
         .frame
             video(src="/assets/splash-2.mp4" autoplay muted loop alt="hello there!")
-        a(class="button button-size:big center:fixed-width" href="#works")
-            img(src="/assets/icons/logo-alt-1.svg", alt="").icon
-            span EXPLORE MY WORK
-            .button-bg
+        a.goto(class="center:fixed-width" href="#about")
+            img(src="/assets/icons/scroll.svg", alt="").icon
     .cluster.main-social(class="center:variable-width")
         nav.cluster
             a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
@@ -21,23 +19,18 @@ block splash
 
 mixin entry(url, title, date, categories, thumb, idx)
     a(href=url)
-        .entry(class="line-height:tight")
+        .stack(class="line-height:tight stack-size:smol")
             - let len = collections.work.length
-            .frame
+            //- .counter
+            //-     img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+            //-     span &nbsp; 0#{idx} / 0#{len}
+            .frame(class="frame:work")
                 img(src=thumb, alt=title)
-            .overlay
-                .counter
-                    img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-                    span &nbsp; 0#{idx + 1} / 0#{len}
-                .stack(class="stack-size:smol center:fixed-width text-align:center").entrydata
-                    h2(class="font-size:variable") #{title}
-                    ul.cat(class="font-size:s cap:true")
-                        each cat in categories
-                            li #{cat.cat}
-                    .button(class="button-size:big")
-                        img(src="/assets/icons/logo-alt-3.svg", alt="").icon
-                        span VIEW WORK
-                        .button-bg
+            .stack(class="stack-size:smol")
+                h2 #{title}
+                ul.cat(class="font-size:s cap:true")
+                    each cat in categories
+                        li.button #{cat.cat}
 
 block content
     .stack#about(class="center:fixed-width text-align:center")
@@ -53,6 +46,6 @@ block content
             br
             span(class="typeface:untitled") WORKS
         img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:big")
-    .sticky#worksegment
-        each work, index in collections.work.reverse()
-            +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index)
+    .track-size#worksegment(data-mininlinesize = "90ch" class="center:variable-width")
+        each work, index in collections.work
+            +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index + 1)
