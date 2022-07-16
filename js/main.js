@@ -1,36 +1,38 @@
 let docObjects = [];
-let domAttrAdd = new Map();
-let domAttrRemove = new Map();
-let domSetStyle = new Map();
-let domSetStyleProp = new Map();
+let domAttrAdd = [];
+let domAttrRemove = [];
+let domSetStyle = [];
+let domSetStyleProp = [];
 let afterFrame = [];
 
 let frameId = 0;
 let lastFrameTime = 0;
 function renderFrame(frameTime) {
-    for (const [idx, elem] of domAttrAdd) {
+    domAttrAdd.forEach((elem, idx) => {
         // Benchmarking shows that querying is faster than set
         if (!docObjects[idx].hasAttribute(elem))
             docObjects[idx].setAttribute(elem, '');
-    }
-    for (const [idx, elem] of domSetStyle)
+    });
+    domSetStyle.forEach((elem, idx) => {
         docObjects[idx].setAttribute('style', elem);
-    for (const [idx, [prop, value]] of domSetStyleProp)
+    });
+    domSetStyleProp.forEach(([prop, value], idx) => {
         docObjects[idx].style.setProperty(prop, value);
-    for (const [idx, elem] of domAttrRemove) {
+    });
+    domAttrRemove.forEach((elem, idx) => {
         if (docObjects[idx].hasAttribute(elem))
             docObjects[idx].removeAttribute(elem);
-    }
+    });
 
-    domAttrAdd.clear();
-    domAttrRemove.clear();
-    domSetStyle.clear();
-    domSetStyleProp.clear();
+    domAttrAdd = [];
+    domAttrRemove = [];
+    domSetStyle = [];
+    domSetStyleProp = [];
 
     frameId = 0;
 
-    let localAfterFrame = [...afterFrame];
-    afterFrame.splice(0);
+    let localAfterFrame = afterFrame;
+    afterFrame = [];
     for (let idx = 0; idx < localAfterFrame.length; idx++)
         localAfterFrame[idx](frameTime);
 
@@ -54,7 +56,7 @@ for (cursor of document.getElementsByClassName("cursor")) {
 let lerpPosition = lerpCursors.map(() => [0, 0]);
 
 function setCursorPosition(id, x, y) {
-    domSetStyleProp.set(id, ['transform', `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0)`]);
+    domSetStyleProp[id] = ['transform', `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0)`];
 }
 
 function lerp(src, dest, step) {
@@ -86,18 +88,18 @@ function queueLerpCursorAnimation() {
 }
 
 function enableCursors() {
-    domAttrAdd.set(DocId, 'data-customcursor');
-    domAttrRemove.delete(DocId);
+    domAttrAdd[DocId] = 'data-customcursor';
+    delete domAttrRemove[DocId];
 }
 
 function disableCursors() {
-    domAttrRemove.set(DocId, 'data-customcursor');
-    domAttrAdd.delete(DocId);
+    domAttrRemove[DocId] = 'data-customcursor';
+    delete domAttrAdd[DocId];
 }
 
 function setHover(id) {
-    domAttrAdd.set(id, 'data-hover');
-    domAttrRemove.delete(id);
+    domAttrAdd[id] = 'data-hover';
+    delete domAttrRemove[id];
 }
 
 function setCursorHover() {
@@ -108,8 +110,8 @@ function setCursorHover() {
 }
 
 function unsetHover(id) {
-    domAttrRemove.set(id, 'data-hover');
-    domAttrAdd.delete(id);
+    domAttrRemove[id] = 'data-hover';
+    delete domAttrAdd[id];
 }
 
 function unsetCursorHover() {
@@ -153,7 +155,7 @@ if (header) {
     new ResizeObserver((entries) => {
         let box = entries[0];
         let blockSize = box.borderBoxSize ? box.borderBoxSize[0].blockSize : box.target.getBoundingClientRect().height;
-        domSetStyleProp.set(DocId, ['--header-block-size', `${blockSize}px`]);
+        domSetStyleProp[DocId] = ['--header-block-size', `${blockSize}px`];
         queueFrame();
     }).observe(header, {box: 'border-box'});
 }
