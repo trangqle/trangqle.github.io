@@ -1,21 +1,21 @@
 ---
 layout: /work.pug
-date: 2021-07-01
+date: 2022-09-01
 title: Anemoia
 desc: Branding for Anemoia, an embodiment of the revival of vintage aesthetics.
 info:
   date: 2021
-  thumb: /assets/work/anemoia/katherine-le-anemoia-boxtape.jpg
+  thumb: /assets/work/anemoia/katherine-le-anemoia-box.jpg
   categories:
     - cat: Brand Identity
     - cat: Packaging Design
 imglist:
-  - url: /assets/work/anemoia/katherine-le-anemoia-box.jpg
-    alt: packing box
   - url: /assets/work/anemoia/katherine-le-anemoia-logoes.jpg
     alt: logoset
   - url: /assets/work/anemoia/katherine-le-anemoia-cards.jpg
     alt: business card
+  - url: /assets/work/anemoia/katherine-le-anemoia-boxtape.jpg
+    alt: packing box
   - url: /assets/work/anemoia/katherine-le-anemoia-bags.jpg
     alt: packing bag
   - url: /assets/work/anemoia/katherine-le-anemoia-wrapping.jpg

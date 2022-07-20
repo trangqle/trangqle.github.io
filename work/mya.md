@@ -1,11 +1,11 @@
 ---
 layout: /work.pug
-date: 2021-03-01
+date: 2022-05-01
 title: Mya
 desc: Branding for Mya, a fashion label that focuses on silk products.
 info:
   date: 2021
-  thumb: /assets/work/mya/katherine-le-mya-card.jpg
+  thumb: /assets/work/mya/katherine-le-mya-card2.jpg
   categories:
   - cat: Brand Identity
   - cat: Packaging Design

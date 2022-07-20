@@ -29,6 +29,6 @@ In June 2021, I worked with researchers of VHS to create publications of their r
 
 Over the next few months, the report was adapted into a free training program for the animal service sector called **Trauma-Informed & Culturally Safe Training** that aims to help animal service workers and organization leaders learn how to implement trauma-informed and culturally safe approaches, and how to mitigate the effects of burnout and compassion fatigue. I was in charge of creating diagrams, charts, worksheets and other materials that help making information easier to digest and more visually appealing. The training was well received and taken by organizations in the animal services sector across Canada with positive feedback.
 
-[Access the report here](https://vancouverhumanesociety.bc.ca/wp-content/uploads/2021/06/Helping-people-and-animals-together-VHS.pdf){.anim-iconfwd}{.anim-underline}
+[Access the report here](https://vancouverhumanesociety.bc.ca/wp-content/uploads/2021/06/Helping-people-and-animals-together-VHS.pdf){.anim-iconfwd}
 
-[Access the training program here](https://vancouverhumanesociety.bc.ca/trauma-informed-training/){.anim-iconfwd}{.anim-underline}
+[Access the training program here](https://vancouverhumanesociety.bc.ca/trauma-informed-training/){.anim-iconfwd}

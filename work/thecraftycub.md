@@ -1,6 +1,6 @@
 ---
 layout: /work.pug
-date: 2021-08-01
+date: 2022-05-02
 title: The Crafty Cub
 desc: The Crafty Cub is a local toymaker and toy shop that specialized in woodworking and knitting. With the pandemic going on, they want to create an online presence so that they can continue bringing happiness to every kids, one toy at a time.
 info:

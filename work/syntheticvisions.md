@@ -1,6 +1,6 @@
 ---
 layout: /work.pug
-date: 2022-01-01
+date: 2022-04-01
 title: Synthetic Visions
 desc: In Synthetic Visions, patterns, algorithms, parameters, functions, and procedures come together to create a system of order, chaos, and chances, pushing the possibilities and boundaries of the systems.
 info:

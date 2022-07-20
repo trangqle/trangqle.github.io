@@ -1,15 +1,20 @@
 extends layouts/main.pug
 
 block splash
-    #splash(class="center:fixed-width")
-        img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:big")
-        h1(class="font-size:variable text-align:center") VISUAL
-            br
-            span(class="typeface:untitled") DESIGNER
+    .track-size#splash(data-mininlinesize="90ch")
         .frame
-            video(src="/assets/splash-2.mp4" autoplay muted loop alt="hello there!")
-        a.goto(class="center:fixed-width" href="#about")
-            img(src="/assets/icons/scroll.svg", alt="").icon
+            video(src="/assets/splash-3.mp4" autoplay muted loop alt="hello there!")
+        .overlay
+            div
+            .stack(class="center:fixed-width")
+                img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:med")
+                h1(class="text-align:center") crafting
+                    br
+                    span(class="typeface:freight-italics") aesthetic + elegant
+                    br
+                    span design solutions
+            a#scroll.goto(class="center:fixed-width" href="#about")
+                img(src="/assets/icons/scroll.svg", alt="").icon
     .cluster.main-social(class="center:variable-width")
         nav.cluster
             a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
@@ -21,31 +26,34 @@ mixin entry(url, title, date, categories, thumb, idx)
     a(href=url)
         .stack(class="line-height:tight stack-size:smol")
             - let len = collections.work.length
-            //- .counter
-            //-     img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-            //-     span &nbsp; 0#{idx} / 0#{len}
+            .counter(class="font-size:s")
+                img(src="/assets/icons/logo-alt-2.svg", alt="").icon
+                span &nbsp; 0#{idx} / 0#{len}
             .frame(class="frame:work")
                 img(src=thumb, alt=title)
             .stack(class="stack-size:smol")
-                h2 #{title}
+                h2(class="font-size:m") #{title}
                 ul.cat(class="font-size:s cap:true")
                     each cat in categories
-                        li.button #{cat.cat}
+                        li #{cat.cat}
 
 block content
     .stack#about(class="center:fixed-width text-align:center")
         p(class="cap:true") Hello there!
-        p(class="font-size:m typeface:freight") I'm Katherine, a visual designer who enjoys creating elegantly aesthetic solutions, with a touch of minimalism.
-        p(class="font-size:m2 typeface:freight") Based in Winnipeg, MB &mdash; working worldwide.
+        p(class="font-size:l typeface:freight") I'm Katherine, a visual designer
+            br
+            | based in
+            span(class="typeface:freight-italics") Winnipeg, MB.
         a(href="/about" class="button-size:big").button
             span MORE ABOUT ME
             .button-bg
-    .stack#works
-        h2(class="font-size:variable-xl text-align:center")
-            | SELECTED
-            br
-            span(class="typeface:untitled") WORKS
-        img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:big")
+    //- .stack#works
+    //-     h2(class="font-size:variable-xl text-align:center")
+    //-         | SELECTED
+    //-         br
+    //-         span(class="typeface:untitled") WORKS
+    //-     img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:big")
+    #works
     .track-size#worksegment(data-mininlinesize = "90ch" class="center:variable-width")
         each work, index in collections.work
             +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index + 1)

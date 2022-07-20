@@ -152,11 +152,10 @@ for (const elem of document.querySelectorAll('a, button')) {
 }
 
 let header = document.getElementById("header");
-let headerBlockSize;
 if (header) {
     new ResizeObserver((entries) => {
         let box = entries[0];
-        headerBlockSize = box.borderBoxSize ? box.borderBoxSize[0].blockSize : box.target.getBoundingClientRect().height;
+        let headerBlockSize = box.borderBoxSize ? box.borderBoxSize[0].blockSize : box.target.getBoundingClientRect().height;
         domSetStyleProp[DocId] = ['--header-block-size', `${headerBlockSize}px`];
         queueFrame();
     }).observe(header, {box: 'border-box'});
