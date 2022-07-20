@@ -45,7 +45,6 @@
     /* color palette */
     --fg: #23221f;
     --bg: #fdfdfb;
-
     --header-block-size: 0px;
     --screen-without-nav: calc(100vh - var(--header-block-size));
 }
@@ -175,7 +174,6 @@ img, video {
     flex-direction: column;
 }
 .stack > *:not(script) + *:not(script) {
-    /* TODO: remove the :not(script) part prior to deployment */
     margin-block-start: var(--space);
 }
 .stack-size\:large {
@@ -314,10 +312,6 @@ img, video {
     justify-content: center;
     gap: 0.5rem;
     overflow: hidden;
-
-    /* https://stackoverflow.com/a/16681137 */
-    /* -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0); */
     z-index: 0;
 }
 .button > *:not(.button-bg) {
@@ -362,7 +356,6 @@ img, video {
     position: sticky;
     top: 0;
     left: 0;
-    /* margin-inline: max(-2vw, calc(var(--gap) * -1)); */
 }
 #header {
     box-sizing: border-box;
@@ -370,7 +363,6 @@ img, video {
     grid-template-columns: 1fr minmax(auto, 10rem) 1fr;
     align-items: center;
     padding-block: var(--gap-s1);
-    /* padding-inline: min(2vw, var(--gap)); */
     --inline-size: 165ch;
 }
 #header > :nth-child(2) {
@@ -420,7 +412,6 @@ img, video {
 #splash {
     display: grid;
     grid-template-columns: 100%;
-    /* grid-template-rows: repeat(4, min-content); */
     justify-items: center;
     gap: var(--gap-2);
     flex-grow: 1;
@@ -460,21 +451,6 @@ img, video {
 #scroll > * {
     min-height: max(10vh, 6rem);
 }
-/* i hate this lmao */
-/* @media screen and (max-width: 960px) {
-    #splash > h1, #splash > .frame {
-        grid-area: unset;
-    }
-    #splash > .frame {
-        max-width: 60vw;
-    }
-    #splash > h1 {
-        font-size: var(--font-size-xl);
-    }
-    #splash > h1, #splash > a {
-        order: 1;
-    }
-} */
 
 #landing {
     min-block-size: var(--screen-without-nav);
@@ -525,7 +501,6 @@ img, video {
 }
 #worksegment[data-abovemininline] {
     grid-template-columns: repeat(3, 1fr);
-    /* row-gap: calc(var(--gap-4) * -1); */
 }
 #worksegment[data-abovemininline] > :nth-child(4n + 1) {
     grid-column: 1 / span 2;
@@ -630,7 +605,6 @@ html {
 .anim-underline:hover::before, .anim-underline:focus::before {
     transform: translateX(0);
 }
-
 .anim-iconback, .anim-iconfwd {
     display: flex;
     align-items: baseline;
@@ -671,17 +645,14 @@ html {
     left: 0;
     /* transform: ; this is set by script */
     opacity: 0;
-
     pointer-events: none;
     scale: 1;
     will-change: transform filter;
     z-index: 9999;
 }
-
 .cursor.cursor-style\:dot {
     mix-blend-mode: exclusion;
 }
-
 .cursor.cursor-style\:dot > :first-child {
     background-color: var(--bg);
     inline-size: 7px;
@@ -689,38 +660,23 @@ html {
     border-radius: 50%;
     transition: transform 0.25s ease;
 }
-
 .cursor.cursor-style\:dot[data-hover] > :first-child {
     transform: scale(calc(30 / 7));
 }
-
 .cursor.cursor-style\:ring {
     background: transparent;
-
     inline-size: 30px;
     block-size: 30px;
     border: 1px solid var(--bg);
     border-radius: 50%;
     mix-blend-mode: exclusion;
 }
-
 .cursor.cursor-style\:ring[data-hover] {
     border-color: transparent;
 }
-
 [data-customcursor], [data-customcursor] * {
     cursor: none;
 }
-
 [data-customcursor] .cursor {
     opacity: 1;
-}
-
-@keyframes animee {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(180deg);
-    }
 }
