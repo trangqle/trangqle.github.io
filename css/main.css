@@ -286,7 +286,7 @@ img, video {
     max-width: var(--width);
     border-radius: 2rem;
 }
-.frame img, .frame video {
+.frame img, .frame video, .frame-overlay {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
@@ -559,7 +559,7 @@ img, video {
     --space: calc(var(--gap-4) * var(--ratio));
 }
 #article {
-    margin-block: calc(var(--gap-4) * 3);
+    margin-block: var(--gap-4);
 }
 #about {
     max-width: min(100%, 105ch);
