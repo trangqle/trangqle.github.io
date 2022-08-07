@@ -5,28 +5,31 @@ title: The Little Book of Succulents
 desc: Layout design for a book about succulents.
 info:
   date: 2022
-  thumb: /assets/work/succulents/katherine-le-book-cover1.jpg
+  thumb: /assets/work/succulent/katherine-le-book-cover.jpg
   categories:
     - cat: Book Design
     - cat: Editorial Design
+    - cat: Illustrations
     - cat: Conceptual Work
 imglist:
-  - url: /assets/work/succulents/katherine-le-book-cover2.jpg
-    alt: book cover
-  - url: /assets/work/succulents/katherine-le-book-spread.jpg
-    alt: closeup of book
-  - url: /assets/work/succulents/katherine-le-book-spread2.jpg
-    alt: closeup of book
-  - url: /assets/work/succulents/katherine-le-book-mockup.jpg
-    alt: a book spread
-  - url: /assets/work/succulents/katherine-le-book-mockup2.jpg
-    alt: a book spread
-  - url: /assets/work/succulents/katherine-le-book-mockup3.jpg
-    alt: a book spread
-  - url: /assets/work/succulents/katherine-le-book-mockup4.jpg
-    alt: a book spread
-  - url: /assets/work/succulents/katherine-le-book-layout.jpg
-    alt: a lot of spread laid out
+  - url: /assets/work/succulent/katherine-le-book-spread.jpg
+    alt: a close-up shot of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview2.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-spread2.jpg
+    alt: a close-up shot of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview3.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview4.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview5.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-openview6.jpg
+    alt: open view of book spread
+  - url: /assets/work/succulent/katherine-le-book-layout.jpg
+    alt: a lot of spreads laid out
 ---
 ## A fun book about the basics of succulent care.
 
