@@ -294,14 +294,6 @@ img, video {
     /* safari workaround */
     border-radius: 2rem;
 }
-
-.frame\:work {
-    --w: 1;
-    --h: 1;
-}
-.frame\:work * {
-    border-radius: unset !important;
-}
 /* button */
 .button {
     position: relative;
@@ -378,7 +370,7 @@ img, video {
 }
 
 #main-nav {
-    --switch: 40ch;
+    --switch: 480px;
 }
 #main-nav > * {
     display: flex;
@@ -536,6 +528,12 @@ img, video {
 #worksegment[data-abovemininline] > :nth-child(6n + 3) .frame\:work,
 #worksegment[data-abovemininline] > :nth-child(6n + 5) .frame\:work {
     aspect-ratio: unset;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* flexbox hax for chrome and safari */
+.frame\:work > * {
     flex-grow: 1;
 }
 .divider {
