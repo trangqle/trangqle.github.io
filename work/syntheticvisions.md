@@ -29,6 +29,8 @@ imglist:
   - url: /assets/work/sv/katherine-le-sv-postergrid.jpg
     alt: all poster designs
 ---
-## In Synthetic Visions, patterns, algorithms, parameters, functions, and procedures come together to create a system of order, chaos, and chances, pushing the possibilities and boundaries of the systems.
+## “In Synthetic Visions, patterns, algorithms, parameters, functions, and procedures come together to create a system of order, chaos, and chances, pushing the possibilities and boundaries of the systems.”
 
-The term generative art has existed for as long as the modern day computer itself, though it has definitely gone through a long period of development. Since the earliest days, the idea of an autonomous system where they are pre-deterministic and constrained by a set of rules, yet produces unexpected results, has been of interest for artists and computer scientists alike. The lack of control, or rather the relinquishment of control, allows the system to rapidly iterate and generate ideas, which more often than not surprises their creators.
+The term “generative art” has existed for as long as the modern day computer itself, though it has definitely gone through a long period of development. Since the earliest days, the idea of an autonomous system where they are pre-deterministic and constrained by a set of rules, yet produces unexpected results, has been of interest for artists and computer scientists alike. The lack of control, or rather the relinquishment of control, allows the system to rapidly iterate and generate ideas, which more often than not surprises their creators.
+
+Synthetic Visions is an exhibition concept created to celebrate and showcase the wonders of what generative iterations can do. The overall aesthetic of this exhibition is created out of the process itself: the set of illustrations were done via p5.js and experimenting with shapes and physics in Cinema 4D, combined with a semi-custom typeface.

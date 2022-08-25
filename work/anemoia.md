@@ -25,7 +25,7 @@ imglist:
   - url: /assets/work/anemoia/katherine-le-anemoia-thankyou.jpg
     alt: thank you card
 ---
-## "We chose the word 'anemoia' because it reflects what we wants to bring to the world - a nostalgia of a faraway past."
+## “We chose the word ‘anemoia’ because it reflects what we wants to bring to the world - a nostalgia of a faraway past.”
 
 Anemoia is an embodiment of the revival of vintage aesthetics. Founded by two woman with a deep interest in Victorian literature and history, Anemoia wants to capture the beauty of this era through fashion that is casual and accessible.
 
