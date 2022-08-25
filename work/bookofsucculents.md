@@ -7,7 +7,6 @@ info:
   date: 2022
   thumb: /assets/work/succulent/katherine-le-book-cover.jpg
   categories:
-    - cat: Book Design
     - cat: Editorial Design
     - cat: Illustrations
     - cat: Conceptual Work
