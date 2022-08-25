@@ -39,7 +39,7 @@
     --font-size-xl: 4rem;
     --font-size-l: 3rem;
     --font-size-m: 2rem;
-    --font-size-m2: 1.25rem;
+    --font-size-m2: 1.2rem;
     --font-size-base: 1rem;
     --font-size-s: 0.7rem;
     /* color palette */
@@ -538,13 +538,6 @@ img, video {
     aspect-ratio: unset;
     flex-grow: 1;
 }
-
-
-#about {
-    max-width: min(100%, 165ch);
-    margin-block: calc(var(--gap-4) * 2);
-}
-
 .divider {
     align-self: center;
     height: 15rem;
@@ -579,14 +572,19 @@ img, video {
 article > *:not(h2) + *:not(h2) {
     margin-block-start: var(--gap-s1) !important;
 }
-#about {
-    max-width: min(100%, 105ch);
-}
 
 /* about me page */
 #aboutme .frame {
-    --w: 3;
-    --h: 4;
+    --w: 1;
+    --h: 1;
+}
+#about {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-2);
+}
+#about > * {
+    flex-grow: 1;
 }
 details > summary {
     cursor: pointer;
