@@ -38,7 +38,7 @@
     /* font size variables */
     --font-size-xl: 4rem;
     --font-size-l: 3rem;
-    --font-size-m: 2.25rem;
+    --font-size-m: 2rem;
     --font-size-m2: 1.25rem;
     --font-size-base: 1rem;
     --font-size-s: 0.7rem;
@@ -86,6 +86,7 @@
 .typeface\:freight {
     font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
+    letter-spacing: 0 !important;
 }
 .typeface\:untitled {
     font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
@@ -95,6 +96,7 @@
     font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
     font-style: italic !important;
+    letter-spacing: 0 !important;
 }
 /* line-height */
 .line-height\:tight, .line-height\:tight * {
@@ -419,6 +421,9 @@ img, video {
 #splash > .overlay, #splash > .frame {
     grid-area: 1 / 1 / 1 / 1;
 }
+#splash > .frame {
+    visibility: hidden;
+}
 #splash[data-abovemininline] {
     grid-template-columns: 1fr 1fr;
 }
@@ -427,19 +432,15 @@ img, video {
 }
 #splash[data-abovemininline] > .overlay {
     order: -1;
+    padding-block: var(--gap-3);
+}
+#splash[data-abovemininline] > .frame {
+    visibility: visible;
 }
 #splash > .overlay {
-    align-self: center;
-    min-height: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 1fr);
-    padding-block: var(--gap);
-    filter: invert() contrast(2);
-    height: calc(var(--screen-without-nav) - var(--gap) * 2 - 1.25rem);
-}
-#splash[data-abovemininline] > .overlay {
-    filter: unset;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding-block: var(--gap-4);
 }
 #splash > .frame {
     aspect-ratio: unset;
@@ -448,7 +449,7 @@ img, video {
     filter: brightness(0.65) contrast(0.7);
 }
 #scroll > * {
-    min-height: max(10vh, 6rem);
+    min-height: clamp(7.5rem, 8vw, 8rem);
 }
 
 #landing {
