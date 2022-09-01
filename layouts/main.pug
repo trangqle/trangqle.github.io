@@ -37,14 +37,14 @@ html(lang="en" prefix="og: https://ogp.me/ns#")
                 header#header(class="center:variable-width")
                     .cluster.text-icon
                         img(src="/assets/icons/logo-alt-2.svg", alt="").icon
-                        p(class="line-height:tight") AVAILABLE FOR FULL TIME
+                        p(class="line-height:tight font-size:s") AVAILABLE FOR FULL TIME
                             br
-                            | + FREELANCE WORK
+                            | + PART TIME WORK
                     a(href="/")
                         .replacements
                             img(class="icon:big" src="/assets/icons/logo-main.svg", alt="logo")
-                            img(class="icon:smol" src="/assets/icons/logo-alt-1.svg", alt="logo")
-                    nav.switcher#main-nav
+                            img(class="icon:med" src="/assets/icons/logo-alt-1.svg", alt="logo")
+                    nav.switcher#main-nav(class="font-size:s")
                         div
                             a.anim-underline(href="/#works")  WORK
                         div
@@ -54,8 +54,7 @@ html(lang="en" prefix="og: https://ogp.me/ns#")
                                 span GET&nbsp;IN&nbsp;TOUCH
                                 .button-bg
             .stack(class="stack-size:large")
-                .cover#landing
-                    block splash
+                block splash
                 block content
             block footer
                 .anime#footer

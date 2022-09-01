@@ -2,7 +2,7 @@
 layout: /work.pug
 date: 2022-04-01
 title: The Little Book of Succulents
-desc: Layout design for a book about succulents.
+desc: A fun book about the basics of succulent care
 info:
   date: 2022
   thumb: /assets/work/succulent/katherine-le-book-cover.jpg
@@ -30,9 +30,9 @@ imglist:
   - url: /assets/work/succulent/katherine-le-book-layout.jpg
     alt: a lot of spreads laid out
 ---
-## A fun book about the basics of succulent care.
+In recent years, succulents have become increasingly popular. They are known for being low-maintainence, having an extremely diverse set of appearance, and can be used for both landscaping and interior decorating purposes. However, the path to become great at succulent care is not as straightforward as one may think. It is very frustrating to see your little plant friend not being fine and have zero idea what might have happened; or even worse, not knowing that the plant is screaming for help at all!
 
-In recent years, succulents have become increasingly popular for their low-maintenance use as indoor decoration and in home gardening. However, it can be very daunting for first-time succulent enthusiasts — myself included — to learn all the know-how for giving their new friends their best care. Over the last few months, I have been looking into tips, tricks, and basic care guides to take care of my own succulent pals. I took the opportunity to archive these newfound knowledge into a small, easy-to-read book.
+There are many books around succulents on the market, but only a few targets the absolutely-new-to-plant-care demographics; and even then, they tend to be too dense on information and can easily overwhelmed readers.
 
-From general plants identification, to watering and propagating, combined with fun, colorful and aesthetic illustrations and photos, The Little Book of Succulents will be your best companion and all you need to start on your succulents adventure.
+From general plants identification, to watering and propagating, The Little Book of Succulents will be your best companion and all you need to start on your succulents adventure. The book is divided into small, easy-to-digest sections, with plenty of images and funky illustrations that make it fun to read and refer back to (and as a little bonus: would also make for a great coffee table book that would complement any plant parent's living room!).
 

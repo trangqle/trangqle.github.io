@@ -1,6 +1,6 @@
 ---
 layout: /work.pug
-date: 2022-09-01
+date: 2022-07-01
 title: Anemoia
 desc: Branding for Anemoia, an embodiment of the revival of vintage aesthetics.
 info:

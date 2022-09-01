@@ -1,47 +1,42 @@
 extends layouts/main.pug
 
 block splash
-    div
-    .track-size#splash(data-mininlinesize="640px" class="center:variable-width")
-        .frame
-            video(src="/assets/splash-3.mp4" autoplay muted loop alt="hello there!")
-        .overlay.stack
-            h1(class="font-size:variable") Hello
-                |
-                |
-                span(class="typeface:freight-italics") there!
-            p(class="font-size:m typeface:freight") I’m Katherine, a visual designer with a love for
-                |
-                |
-                span(class="typeface:freight-italics") aesthetic + elegant
-                |
-                | solutions. Using a pragmatic approach with a strong emphasis on research, I create visual systems that enhance values and deepen connections to people.
-            a#scroll.goto(href="#works")
-                img(src="/assets/icons/scroll.svg", alt="").icon
-    .cluster.main-social(class="center:variable-width")
-        nav.cluster
-            a.anim-underline(href="https://behance.net/katherine-le") BEHANCE
-            a.anim-underline(href="https://instagram.com/meyuneko") INSTAGRAM
-            a.anim-underline(href="https://www.linkedin.com/in/katherinele00") LINKEDIN
-        p &#169; 2022
-
+    .stack#splash(class="center:variable-width")
+        h1(class="font-size:variable") Hello
+            |
+            |
+            span(class="typeface:freight-italics") there!
+        p(class="font-size:m typeface:freight") I’m Katherine, a visual designer with a love for
+            |
+            |
+            span(class="typeface:freight-italics") aesthetic + elegant
+            |
+            | solutions.
+            |
+            img(src="/assets/icons/logo-alt-1.svg", alt="", class="icon:smol")
+            |
+            | Using a pragmatic approach with a strong emphasis on research, I create visual systems that enhance values and deepen connections to people.
+            |
+            img(src="/assets/icons/logo-alt-2.svg", alt="", class="icon:smol")
+        a#scroll.goto(href="#works")
+            img(src="/assets/icons/scroll.svg", alt="").icon
 mixin entry(url, title, date, categories, thumb, idx)
     a(href=url)
         .stack(class="line-height:tight stack-size:smol")
             - let len = collections.work.length
-            .counter(class="font-size:s")
+            .counter(class="font-size:xs")
                 img(src="/assets/icons/logo-alt-2.svg", alt="").icon
                 span &nbsp; 0#{idx} / 0#{len}
             .frame(class="frame:work")
                 img(src=thumb, alt=title)
             .stack(class="stack-size:smol")
-                h2(class="font-size:m") #{title}
-                ul.cat(class="font-size:s cap:true")
+                h3(class="font-size:m") #{title}
+                ul.cat(class="font-size:xs cap:true")
                     each cat in categories
                         li #{cat.cat}
 
 block content
     #works
-    .track-size#worksegment(data-mininlinesize = "640px" class="center:variable-width")
+    .track-size#worksegment(data-mininlinesize = "800px" class="center:variable-width")
         each work, index in collections.work
             +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index + 1)

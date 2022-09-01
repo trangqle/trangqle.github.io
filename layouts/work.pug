@@ -8,16 +8,16 @@ block splash
             img(src="/assets/icons/logo-alt-2.svg", alt="").icon
             span &nbsp; 0#{pageIdx} / 0#{len}
         .stack#work-info
-            .switcher(class="center:variable-width")
-                h1(class="font-size:xl") #{title}
-                .cluster
+            .stack(class="center:variable-width stack-size:large")
+                h1(class="font-size:variable-xl") #{title}
+                .cluster(class="")
                     .stack(class="stack-size:smol")
-                        p CATEGORIES
+                        p(class="accent:light cap:true") CATEGORIES
                         ul
                             each cat in info.categories
                                 li #{cat.cat}
                     .stack(class="stack-size:smol")
-                        p YEAR
+                        p(class="accent:light cap:true") YEAR
                         p #{info.date}
             .frame#worksplash
                 img(src=info.thumb, alt=title)
@@ -26,7 +26,7 @@ block splash
 block content
     .switcher#article(class="center:variable-width")
         div
-        article.stack !{content}
+        article.stack(class="stack-size:med") !{content}
     .stack(class="center:variable-width")
         if imglist
             each img in imglist
