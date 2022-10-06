@@ -27,4 +27,4 @@ imglist:
 
 Mya's branding is developed with their values at its core. The logotype is created using a customized modern serif typeface, giving it a sense of luxurious and elegance that are associated with silk, with an italicized Y as a stress syllable and for visual interest. The flower mark are made from water droplet symbols, which represents their commitment to be a sustainable and eco-friendly label.
 
-This project was featured by DesignRush's logo design awards in **Best Minimal Logo Designs**.
+This project was featured by DesignRush's [**logo design awards**](https://www.designrush.com/best-designs/logo) in **Best Minimal Logo Designs**.
