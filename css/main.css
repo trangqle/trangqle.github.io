@@ -2,11 +2,11 @@
 
 /* @font-face */
 @font-face {
-    font-family: "FreightDisp Pro Light";
+    font-family: "EditorsNote";
     font-weight: 400;
     font-display: swap;
-    src: url('/assets/fonts/FreightDispProLight-Regular.woff2') format('woff2'),
-         url('/assets/fonts/FreightDispProLight-Regular.woff') format('woff');
+    src: url('/assets/fonts/EditorsNote-Thin.woff2') format('woff2'),
+         url('/assets/fonts/EditorsNote-Thin.woff') format('woff');
 }
 @font-face {
     font-family: "Untitled Sans";
@@ -23,12 +23,12 @@
          url('/assets/fonts/UntitledSans-Medium.woff') format('woff');
 }
 @font-face {
-    font-family: "FreightDisp Pro Light";
+    font-family: "EditorsNote";
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    src: url('/assets/fonts/FreightDispProLight-Italic.woff2') format('woff2'),
-         url('/assets/fonts/FreightDispProLight-Italic.woff') format('woff');
+    src: url('/assets/fonts/EditorsNote-ThinItalic.woff2') format('woff2'),
+         url('/assets/fonts/EditorsNote-ThinItalic.woff') format('woff');
 }
 
 /* global type styling */
@@ -88,8 +88,8 @@
 .text-align\:center {
     text-align: center !important;
 }
-.typeface\:freight {
-    font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
+.typeface\:editor {
+    font-family: "EditorsNote", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
     letter-spacing: 0 !important;
 }
@@ -97,8 +97,8 @@
     font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
     font-weight: 400 !important;
 }
-.typeface\:freight-italics {
-    font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
+.typeface\:editor-italics {
+    font-family: "EditorsNote", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
     font-style: italic !important;
     letter-spacing: 0 !important;
@@ -126,9 +126,10 @@
 
 /* element type styling */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "FreightDisp Pro Light", 'Times New Roman', Times, serif;
+    font-family: "EditorsNote", 'Times New Roman', Times, serif;
     font-weight: 400;
     line-height: 1.2;
+    /* letter-spacing: 0.02em; */
 }
 h1 {
     font-size: var(--font-size-l);
