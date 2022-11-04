@@ -1,6 +1,6 @@
 ---
 layout: /work.pug
-date: 2020-06-01
+date: 2020-09-01
 title: Vancouver Humane Society
 desc: In June 2021, I worked with researchers of VHS to create publications of their report, Helping People and Animals Together - Taking a Trauma-Informed, Culturally Safe Approach Towards Assisting Placed-at-Risk People with Addressing Animal Neglect
 info:

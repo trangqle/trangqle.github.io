@@ -11,10 +11,10 @@ info:
     - cat: Web Design
     - cat: Conceptual Work
 imglist:
-  - url: /assets/work/cub/katherine-le-thecraftycub-mockup.jpg
-    alt: mockup
   - url: /assets/work/cub/katherine-le-thecraftycub-logoes.jpg
     alt: logoset
+  - url: /assets/work/cub/katherine-le-thecraftycub-grid.jpg
+    alt: grid layout
   - url: /assets/work/cub/katherine-le-thecraftycub-homepage.jpg
     alt: homepage
   - url: /assets/work/cub/katherine-le-thecraftycub-products.jpg
@@ -23,6 +23,8 @@ imglist:
     alt: product detail
   - url: /assets/work/cub/katherine-le-thecraftycub-phones.jpg
     alt: mobile site
+  - url: /assets/work/cub/katherine-le-thecraftycub-phone-tablet.jpg
+    alt: mobile and tablet layout
 ---
 ## The Crafty Cub is a local toymaker and toy shop that specialized in woodworking and knitting. With the pandemic going on, they want to create an online presence so that they can continue bringing happiness to every kids, one toy at a time.
 

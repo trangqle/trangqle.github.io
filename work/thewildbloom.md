@@ -1,6 +1,6 @@
 ---
 layout: /work.pug
-date: 2022-08-01
+date: 2020-07-01
 title: The Wild Bloom
 desc: Packaging for The Wild Bloom, an organic herbal tea business with a refined, delicate, organic and authentic aesthetics.
 info:
