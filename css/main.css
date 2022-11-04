@@ -9,18 +9,18 @@
          url('/assets/fonts/EditorsNote-Thin.woff') format('woff');
 }
 @font-face {
-    font-family: "Untitled Sans";
+    font-family: "Public Sans";
     font-weight: 400;
     font-display: swap;
-    src: url('/assets/fonts/UntitledSans-Regular.woff2') format('woff2'),
-         url('/assets/fonts/UntitledSans-Regular.woff') format('woff');
+    src: url('/assets/fonts/PublicSans-Light.woff2') format('woff2'),
+         url('/assets/fonts/PublicSans-Light.woff') format('woff');
 }
 @font-face {
-    font-family: "Untitled Sans";
+    font-family: "Public Sans";
     font-weight: 700;
     font-display: swap;
-    src: url('/assets/fonts/UntitledSans-Medium.woff2') format('woff2'),
-         url('/assets/fonts/UntitledSans-Medium.woff') format('woff');
+    src: url('/assets/fonts/PublicSans-Bold.woff2') format('woff2'),
+         url('/assets/fonts/PublicSans-Bold.woff') format('woff');
 }
 @font-face {
     font-family: "EditorsNote";
@@ -33,7 +33,7 @@
 
 /* global type styling */
 :root {
-    font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
+    font-family: "Public Sans", Helvetica, Arial, sans-serif;
     font-size: clamp(0.85rem, 1.2vw, 1rem);
     /* font size variables */
     --font-size-xl: 4rem;
@@ -91,21 +91,19 @@
 .typeface\:editor {
     font-family: "EditorsNote", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
-    letter-spacing: 0 !important;
 }
-.typeface\:untitled {
-    font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
+.typeface\:ps {
+    font-family: "Public Sans", Helvetica, Arial, sans-serif;
     font-weight: 400 !important;
 }
 .typeface\:editor-italics {
     font-family: "EditorsNote", 'Times New Roman', Times, serif;
     font-weight: 400 !important;
     font-style: italic !important;
-    letter-spacing: 0 !important;
 }
 
-.typeface\:untitled-bold {
-    font-family: "Untitled Sans", Helvetica, Arial, sans-serif;
+.typeface\:ps-bold {
+    font-family: "Public Sans", Helvetica, Arial, sans-serif;
     font-weight: 700 !important;
 }
 /* line-height */
@@ -142,7 +140,6 @@ h3 {
 }
 p {
     line-height: 1.4;
-    letter-spacing: -0.03em;
 }
 a {
     text-decoration: none;
