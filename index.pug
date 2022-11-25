@@ -39,4 +39,5 @@ block content
     #works
     .track-size#worksegment(data-mininlinesize = "800px" class="center:variable-width")
         each work, index in collections.work
-            +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index + 1)
+            if !work.data.hidden
+                +entry(work.url, work.data.title, work.data.info.date, work.data.info.categories, work.data.info.thumb, index + 1)

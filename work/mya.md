@@ -1,4 +1,5 @@
 ---
+hidden: true
 layout: /work.pug
 date: 2020-05-01
 title: Mya
