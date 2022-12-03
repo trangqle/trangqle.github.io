@@ -1,6 +1,8 @@
 const Image = require('@11ty/eleventy-img');
 const getImageSize = require('image-size')
 const fs = require('fs');
+const lightningcss = require('lightningcss');
+const { Buffer } = require('node:buffer');
 
 function makeImage(src, options) {
     const opts = {
@@ -59,8 +61,20 @@ function imageShortcode(src, alt, sizes = "100vw") {
 
 module.exports = function(eleventyConfig) {
     // Watch changes to css
-    eleventyConfig.addWatchTarget("css");
-    eleventyConfig.addPassthroughCopy("css");
+    eleventyConfig.addTemplateFormats('css');
+    eleventyConfig.addExtension('css', {
+        outputFileExtension: 'css',
+
+        compile: function(content, path) {
+            let { code } = lightningcss.transform({
+                filename: path,
+                code: Buffer.from(content),
+                minify: true,
+            });
+
+            return () => code.toString('utf8');
+        }
+    });
     // Watch changes to not css
     eleventyConfig.addWatchTarget("./js/");
     eleventyConfig.addPassthroughCopy("./js/");

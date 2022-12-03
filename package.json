@@ -13,6 +13,7 @@
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-img": "^2.0.1",
     "image-size": "^1.0.2",
+    "lightningcss": "^1.17.1",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-block-image": "^0.0.3"
