@@ -28,7 +28,7 @@ mixin entry(url, title, date, categories, thumb, idx)
                 img(src="/assets/icons/logo-alt-2.svg", alt="").icon
                 span &nbsp; 0#{idx} / 0#{len}
             .frame(class="frame:work")
-                img(src=thumb, alt=title)
+                != filters.image('./' + thumb, title)
             .stack(class="stack-size:smol")
                 h3(class="font-size:m") #{title}
                 ul.cat(class="font-size:xs cap:true")

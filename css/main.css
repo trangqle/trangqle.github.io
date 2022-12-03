@@ -180,6 +180,16 @@ html, body {
 body {
     margin-inline: min(2vw, var(--gap));
 }
+
+/* chrome picture flex hax */
+picture {
+    display: flex;
+    flex-direction: column;
+}
+picture > img {
+    flex-grow: 1;
+}
+
 img, video {
     inline-size: 100%;
     block-size: 100%;
@@ -278,7 +288,7 @@ img, video {
     max-width: var(--width);
     border-radius: 2rem;
 }
-.frame img, .frame video, .frame-overlay {
+.frame img, .frame video, .frame picture, .frame-overlay {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
@@ -477,6 +487,9 @@ img, video {
     flex-direction: column;
 }
 /* flexbox hax for chrome and safari */
+.frame\:work {
+    display: flex;
+}
 .frame\:work > * {
     flex-grow: 1;
 }

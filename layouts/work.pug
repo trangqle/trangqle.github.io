@@ -20,7 +20,8 @@ block splash
                         p(class="accent:light cap:true") YEAR
                         p #{info.date}
             .frame#worksplash
-                img(src=info.thumb, alt=title)
+                // img(src=info.thumb, alt=title)
+                != filters.image('./' + info.thumb, title)
 
 
 block content
@@ -33,7 +34,8 @@ block content
                 if img.video
                     video(src=img.url autoplay muted loop alt=img.alt)
                 else
-                    img(src=img.url, alt=img.alt)
+                    // img(src=img.url, alt=img.alt)
+                    != filters.image('./' + img.url, img.alt)
     nav.cluster(class="center:variable-width")
         -
             let prev = filters.getPreviousCollectionItem(collections.work, page)
