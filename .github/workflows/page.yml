@@ -21,9 +21,20 @@ jobs:
       - name: Build page
         run: NODE_ENV=production npx @11ty/eleventy
 
-      - name: Publish to Github Pages
-        if: github.event_name == 'push'
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          branch: gh-pages
-          folder: _site
+      - uses: actions/upload-pages-artifact@v1
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1
